@@ -1,3 +1,3 @@
 # NPMG-Informatics-CPP
 
-В "HomeWork" качвайте задачите, които са за домашно, а в "Work" качвайте задачите, които сме правили в час. Ако може, задачите да се качват само в .cpp формат!
+A repository in which all the task done at school are stored, created with C++ Programming Language.
