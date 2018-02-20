@@ -20,13 +20,16 @@ void Triangle::read()
     do
     {
         cin>>a>>b>>c;
+        if(!(a < c + b && b < a + c && c < a + b))
+            cout<<"Not a triangle.\n";
     }
-    while(a < c + b);
+    while(!(a < c + b && b < a + c && c < a + b));
 }
 
 void Triangle::write()
 {
-    cout<<a<<endl<<b<<endl<<c<<endl;
+    cout<<"Triangle - ";
+    cout<<a<<" "<<b<<" "<<c<<endl;
 }
 
 double Triangle::face()
@@ -46,7 +49,7 @@ void Triangle::triangleByAngles()
 {
     if(a*a == b*b + c*c || b*b == a*a + c*c || c*c == a*a + b*b)
         cout<<"The triangle is rectangular.\n";
-    else if (a*a < b*b + c*c || b*b < c*c + a*a || c*c == a*a + b*b)
+    else if (a*a < b*b + c*c || b*b < c*c + a*a || c*c < a*a + b*b)
             cout<<"The triangle is triangular.\n";
     else cout<<"The triangle is angled.\n";
 }
@@ -63,32 +66,29 @@ void Triangle::triangleBySides()
 int main()
 {
     Triangle T1,T2;
-    cout<<"T1:\n";
     T1.read();
     T1.write();
-    cout<<"T2:\n";
     T2.read();
     T2.write();
     if(T1.face() >= T2.face())
     {
-        cout<<"The face of bigger triangle is "<<T1.face()<<"\nSides:\n";
+        cout<<"The face of bigger triangle is "<<T1.face()<<"\nSides: ";
         T1.triangleBySides();
     }
     else
     {
-        cout<<"The face of bigger triangle is "<<T2.face()<<"\nSides:\n";
+        cout<<"The face of bigger triangle is "<<T2.face()<<"\nSides: ";
         T2.triangleBySides();
     }
     if(T1.perimeter() >= T2.perimeter())
     {
-        cout<<"The perimeter of bigger triangle is "<<T1.perimeter()<<"\nAngles:\n";
+        cout<<"The perimeter of bigger triangle is "<<T1.perimeter()<<"\nAngles: ";
         T1.triangleByAngles();
     }
     else
     {
-        cout<<"The perimeter of bigger triangle is "<<T2.perimeter()<<"\nAngles:\n";
+        cout<<"The perimeter of bigger triangle is "<<T2.perimeter()<<"\nAngles: ";
         T2.triangleByAngles();
     }
-
     return 0;
 }
