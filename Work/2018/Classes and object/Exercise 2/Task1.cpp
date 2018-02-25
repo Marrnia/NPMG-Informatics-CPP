@@ -61,12 +61,48 @@ double Circle::area(double PI)
 
 void Circle::crosspoints_Ox()
 {
-    cout<<"Crosspoint Ox = ("<<r-x<<";0)"<<endl;
+    y = abs(y);
+    if(r == y)
+        cout<<"Crosspoint Ox = ("<<x<<";0)\n";
+    else if (r > y)
+    {
+        double a = 1.0;
+        double b = x*(-2);
+        double c = (y * y) - (r*r) + (x*x);
+        double D = (b*b) - 4*a*c;
+        if(D>0)
+        {
+            double x1 = (-b + sqrt(D)) / 2*a;
+            double x2 = (-b - sqrt(D)) / 2*a;
+            cout<<"Crosspoint Ox = ("<<x1<<";0) and ("<<x2<<";0)\n";
+        }
+        else cout<<"Error!\n";
+    }
+    else if (r < y)
+        cout<<"Crosspoint Ox nowhere.\n";
 }
 
 void Circle::crosspoints_Oy()
 {
-    cout<<"Crosspoint Oy = ("<<"0;"<<r-y<<")"<<endl;
+    x = abs(x);
+    if(r == x)
+        cout<<"Crosspoint Oy = ("<<y<<";0)\n";
+    else if (r > x)
+    {
+        double a = 1.0;
+        double b = y*(-2);
+        double c = (y * y) - (r*r) + (x*x);
+        double D = (b*b) - 4*a*c;
+        if(D>0)
+        {
+            double y1 = (-b + sqrt(D)) / 2*a;
+            double y2 = (-b - sqrt(D)) / 2*a;
+            cout<<"Crosspoint Oy = (0;"<<y1<<") and (0;"<<y2<<")\n";
+        }
+        else cout<<"Error!\n";
+    }
+    else if (r < x)
+        cout<<"Crosspoint Oy nowhere.\n";
 }
 
 int main()
