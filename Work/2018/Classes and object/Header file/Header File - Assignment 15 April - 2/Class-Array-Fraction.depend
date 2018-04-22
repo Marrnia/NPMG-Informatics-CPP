@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1524259646 source:c:\users\martin\documents\codeblocks\classes\class-array-fraction\main.cpp
+	<iostream>
+	"Fraction.h"
+
+1524258965 c:\users\martin\documents\codeblocks\classes\class-array-fraction\include\fraction.h
+	<iostream>
+
+1524259522 source:c:\users\martin\documents\codeblocks\classes\class-array-fraction\src\fraction.cpp
+	"Fraction.h"
+	<iostream>
+	<cmath>
+
+1524406174 source:c:\users\martin\documents\codeblocks\classes\header file - assigment 15 april - 2\main.cpp
+	<iostream>
+	<ctime>
+	"Fraction.h"
+
+1524406399 c:\users\martin\documents\codeblocks\classes\header file - assigment 15 april - 2\include\fraction.h
+	<iostream>
+
+1524398096 source:c:\users\martin\documents\codeblocks\classes\header file - assigment 15 april - 2\src\fraction.cpp
+	"Fraction.h"
+	<iostream>
+	<cmath>
+	<algorithm>
+

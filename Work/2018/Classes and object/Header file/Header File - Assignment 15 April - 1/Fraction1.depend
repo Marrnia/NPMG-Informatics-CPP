@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1524051276 source:c:\users\martin\documents\codeblocks\classes\fraction1\src\fraction.cpp
+	"Fraction.h"
+	<iostream>
+	<cmath>
+
+1524051232 c:\users\martin\documents\codeblocks\classes\fraction1\include\fraction.h
+	<iostream>
+
+1524051320 source:c:\users\martin\documents\codeblocks\classes\fraction1\main.cpp
+	<iostream>
+	<cmath>
+	"Fraction.h"
+
